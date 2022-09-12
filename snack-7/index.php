@@ -10,9 +10,9 @@
     <?php
     $classe = [
         $alunno1 = [
-            $nome= "Luca",
-            $cognome= "Rossi",
-            $voti= [
+            "nome" => "Luca",
+            "cognome" => "Rossi",
+            "voti" => [
                 7,
                 8,
                 5,
@@ -21,9 +21,9 @@
             ], 
         ],
         $alunno2 = [
-            $nome= "Gloria",
-            $cognome= "Bianchi",
-            $voti= [
+            "nome" => "Gloria",
+            "cognome" => "Bianchi",
+            "voti" => [
                 5,
                 3,
                 6,
@@ -31,9 +31,9 @@
             ], 
         ],
         $alunno3 = [
-            $nome= "Lucia",
-            $cognome= "Verdi",
-            $voti= [
+            "nome" => "Lucia",
+            "cognome" => "Verdi",
+            "voti" => [
                 8,
                 10,
                 9,
@@ -49,8 +49,8 @@
         <?php
             for($i=0; $i<count($classe); $i++){
                 $alunno = $classe[$i];
-                echo "<p>nome: ". $alunno[0]. "/ cognome: ". $alunno[1]. "</p>";
-                $mediavoti = ceil(array_sum($alunno[2]) / count($alunno[2]) * 10) / 10;
+                echo "<p>nome: ". $alunno["nome"]. "/ cognome: ". $alunno["cognome"]. "</p>";
+                $mediavoti = ceil(array_sum($alunno["voti"]) / count($alunno["voti"]) * 10) / 10;
                 echo "<p>Voto in Pagella: ". $mediavoti ."</p>";
             }
         ?>
